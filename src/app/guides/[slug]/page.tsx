@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
 import { absoluteUrl, SITE_NAME } from "@/lib/seo";
-import { guideMap, guides } from "@/content/guides";
+import { guideMap, guides, guideSources } from "@/content/guides";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -42,6 +42,8 @@ export default async function GuidePage({ params }: Props) {
     ...guide.sections.flatMap((section) => [section.heading, ...section.paragraphs]),
   ].join(" ").trim().split(/\s+/).length;
   const readingMinutes = Math.max(4, Math.ceil(wordCount / 220));
+
+  const sources = guideSources[guide.slug] ?? [];
 
   const related = guides
     .filter((item) => item.slug !== guide.slug)
@@ -114,6 +116,13 @@ export default async function GuidePage({ params }: Props) {
             <p className="mt-2 leading-7 text-slate-700">{guide.takeaway}</p>
           </div>
 
+          <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+            <div className="text-xs font-bold uppercase tracking-[.14em] text-slate-500">Editorial information</div>
+            <div className="mt-2 text-sm leading-6 text-slate-600">
+              Written for ToolMoney readers by the ToolMoney Editorial Team. Reviewed: 18 September 2026. This guide explains calculation concepts and planning assumptions; it does not provide personalized financial, tax or investment advice.
+            </div>
+          </div>
+
           <div className="mt-10 space-y-10">
             {guide.sections.map((section) => (
               <section key={section.heading}>
@@ -141,6 +150,24 @@ export default async function GuidePage({ params }: Props) {
               Try {guide.calculatorLabel} →
             </Link>
           </section>
+
+          {sources.length > 0 && (
+            <section className="mt-12 rounded-3xl border border-slate-200 bg-slate-50 p-7">
+              <h2 className="text-2xl font-extrabold text-slate-950">Official sources and further reading</h2>
+              <p className="mt-2 leading-7 text-slate-600">
+                These references are provided so readers can verify current rules, product information or investor-education material. Official rules and product terms can change, so use the relevant source for the latest information.
+              </p>
+              <ul className="mt-5 space-y-3">
+                {sources.map((source) => (
+                  <li key={source.url}>
+                    <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-bold text-blue-700 underline decoration-blue-200 underline-offset-4 hover:text-blue-800">
+                      {source.label} ↗
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           {related.length > 0 && (
             <section className="mt-12">
