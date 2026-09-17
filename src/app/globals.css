@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f7fb;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --brand: #2563eb;
+  --brand-2: #7c3aed;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at 8% 5%, rgba(37,99,235,.10), transparent 25%),
+    radial-gradient(circle at 92% 10%, rgba(124,58,237,.08), transparent 24%),
+    #f5f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+.container { width: min(1180px, calc(100% - 32px)); margin-inline: auto; }
+.shadow-soft { box-shadow: 0 16px 50px rgba(15,23,42,.07); }
+.card-hover { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 55px rgba(15,23,42,.11); border-color: #bfdbfe; }
+.glass { background: rgba(255,255,255,.78); backdrop-filter: blur(16px); }
+.hero-grid {
+  background-image: linear-gradient(rgba(148,163,184,.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148,163,184,.10) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+input[type="range"] { accent-color: #2563eb; }
