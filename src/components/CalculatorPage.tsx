@@ -20,9 +20,24 @@ type Props = {
   source?: { label: string; href: string };
 };
 
+const formulas: Record<string, string> = {
+  "sip-calculator": "FV = P × [((1 + r)^n − 1) / r], using monthly contributions and a monthly rate derived from the assumed annual return.",
+  "step-up-sip-calculator": "The monthly SIP increases by the selected step-up percentage at the start of each investment year; each instalment is then projected using the assumed monthly rate.",
+  "lumpsum-calculator": "FV = P × (1 + r)^n, where P is the initial investment, r is the annual return and n is the number of years.",
+  "cagr-calculator": "CAGR = (Ending Value / Starting Value)^(1 / Years) − 1.",
+  "emi-calculator": "EMI = P × r × (1 + r)^n / [(1 + r)^n − 1], where r is the monthly interest rate and n is the number of monthly payments.",
+  "home-loan-calculator": "The home-loan EMI uses the standard reducing-balance EMI formula with a monthly interest rate and monthly repayment count.",
+  "loan-prepayment-calculator": "The model reduces outstanding principal by the planned prepayment and compares the resulting repayment schedule with the original schedule.",
+  "fd-calculator": "FV = P × (1 + r/m)^(m×t), where m is the assumed compounding frequency.",
+  "rd-calculator": "The calculator uses a recurring-deposit estimate based on regular monthly deposits and the assumed quarterly rate.",
+  "ppf-calculator": "The illustration applies the assumed annual PPF rate to monthly balances under the selected contribution timing assumption.",
+  "ctc-to-in-hand": "The estimate starts with annual CTC, separates assumed salary components and subtracts the selected statutory/payroll assumptions.",
+  "income-tax-calculator": "Tax is estimated by applying the selected regime's slab rates and applicable deductions, rebates, surcharge and cess assumptions."
+};
+
 const guidance: Record<string, { methodology: string; limitations: string; source?: { label: string; href: string } }> = {
   "sip-calculator": {
-    methodology: "The calculator uses a standard monthly-compounding SIP model. The monthly contribution is assumed to be invested at the end of each month, and the annual return entered by the user is converted to a monthly rate for the estimate.",
+    methodology: "The calculator uses a standard SIP future-value model. Each monthly contribution is assumed to be invested at the end of the month, and the annual return entered by the user is converted to a monthly rate for the estimate. Formula: FV = P × [((1 + r)^n − 1) / r], where P is the monthly investment, r is the monthly rate and n is the number of months.",
     limitations: "Actual mutual-fund returns vary over time. The result does not account for expense ratios, taxes, exit loads, market volatility or the exact NAV on each instalment date.",
   },
   "step-up-sip-calculator": {
@@ -146,7 +161,7 @@ export default function CalculatorPage({ title, category, description, slug, chi
 
           {howToUse?.length ? <article className="mt-6 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">How to use this calculator</h2><ol className="mt-4 list-decimal space-y-2 pl-6 text-slate-600">{howToUse.map((step) => <li key={step} className="leading-7">{step}</li>)}</ol></article> : null}
 
-          {effectiveMethodology && <article className="mt-6 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">Calculation methodology</h2><p className="mt-3 leading-7 text-slate-600">{effectiveMethodology}</p>{effectiveSource && <p className="mt-4 text-sm text-slate-500">Reference: <a href={effectiveSource.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 underline">{effectiveSource.label}</a></p>}</article>}
+          {effectiveMethodology && <article className="mt-6 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">Calculation methodology</h2><p className="mt-3 leading-7 text-slate-600">{effectiveMethodology}</p>{formulas[slug] && <div className="mt-5 rounded-2xl bg-slate-50 p-5"><h3 className="font-bold text-slate-900">Formula / calculation model</h3><p className="mt-2 text-sm leading-6 text-slate-600">{formulas[slug]}</p></div>}{effectiveSource && <p className="mt-4 text-sm text-slate-500">Reference: <a href={effectiveSource.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 underline">{effectiveSource.label}</a></p>}</article>}
 
           {effectiveLimitations && <article className="mt-6 rounded-3xl border border-amber-200 bg-amber-50/60 p-7"><h2 className="text-2xl font-extrabold">Important assumptions and limitations</h2><p className="mt-3 leading-7 text-slate-700">{effectiveLimitations}</p></article>}
 

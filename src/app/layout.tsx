@@ -37,12 +37,12 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Financial Calculators for Indians`,
+    title: `${SITE_NAME} — Free Financial Calculators India`,
     description: DEFAULT_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Financial Calculators for Indians`,
+    title: `${SITE_NAME} — Free Financial Calculators India`,
     description: DEFAULT_DESCRIPTION,
   },
 };

@@ -57,6 +57,22 @@ export default function Home() {
           <div className="mt-7 flex flex-wrap justify-center gap-x-7 gap-y-3 text-xs font-semibold text-slate-500"><span><Zap className="mr-1 inline text-blue-600" size={15}/>Instant calculations</span><span><ShieldCheck className="mr-1 inline text-blue-600" size={15}/>Transparent assumptions</span><span><CheckCircle2 className="mr-1 inline text-blue-600" size={15}/>Mobile friendly</span></div>
         </div>
       </section>
+      <section className="container pb-8">
+        <div className="grid gap-6 md:grid-cols-3">
+          <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h2 className="text-xl font-extrabold text-slate-950">Investment calculators</h2>
+            <p className="mt-2 text-sm leading-6 text-slate-600">Estimate SIP, step-up SIP, lumpsum and CAGR scenarios using clear assumptions and easy-to-read results.</p>
+          </article>
+          <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h2 className="text-xl font-extrabold text-slate-950">Loan calculators</h2>
+            <p className="mt-2 text-sm leading-6 text-slate-600">Compare EMI, home-loan and prepayment scenarios to understand principal, interest and repayment costs.</p>
+          </article>
+          <article className="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h2 className="text-xl font-extrabold text-slate-950">Savings & tax tools</h2>
+            <p className="mt-2 text-sm leading-6 text-slate-600">Explore FD, RD, PPF, salary and income-tax estimates with assumptions clearly shown on every page.</p>
+          </article>
+        </div>
+      </section>
       <AllCalculators/>
       <section className="container pb-8"><div className="rounded-3xl bg-gradient-to-r from-slate-950 via-slate-900 to-blue-950 p-8 text-white md:p-12"><div className="max-w-2xl"><p className="text-xs font-bold tracking-[.2em] text-blue-300">BUILT FOR CLARITY</p><h2 className="mt-3 text-3xl font-extrabold">Calculate first. Understand second. Plan better.</h2><p className="mt-3 leading-7 text-slate-300">Every calculator is designed to show the important numbers clearly, with assumptions and explanations instead of confusing spreadsheets.</p><Link href="/tools/sip-calculator" className="mt-6 inline-flex items-center rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950">Try SIP Calculator <ArrowRight className="ml-2" size={16}/></Link></div></div></section>
       <Footer/>
