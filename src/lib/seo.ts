@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://example.com").replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://toolmoney.in").replace(/\/$/, "");
 export const SITE_NAME = "Money Tools";
-export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@yourdomain.com";
+export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@toolmoney.in";
 export const DEFAULT_DESCRIPTION =
   "Free India-focused financial calculators for SIP, EMI, FD, RD, PPF, loans, salary and tax planning.";
 

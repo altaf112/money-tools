@@ -25,11 +25,11 @@ npm start
 Copy `.env.example` to `.env.local` and set:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://your-real-domain.com
-NEXT_PUBLIC_SUPPORT_EMAIL=support@your-real-domain.com
+NEXT_PUBLIC_SITE_URL=https://toolmoney.in
+NEXT_PUBLIC_SUPPORT_EMAIL=support@toolmoney.in
 ```
 
-Do not deploy with the placeholder domain or support email. The final domain is intentionally left configurable until the production domain is chosen.
+Production domain: https://toolmoney.in. The support email is configured as support@toolmoney.in; create/route that mailbox before relying on it for customer support.
 
 ## SEO
 
