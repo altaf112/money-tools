@@ -16,6 +16,21 @@ const tools = [
   "income-tax-calculator",
 ];
 
+const guides = [
+  "sip-calculator-guide",
+  "step-up-sip-calculator-guide",
+  "lumpsum-calculator-guide",
+  "cagr-calculator-guide",
+  "emi-calculator-guide",
+  "home-loan-calculator-guide",
+  "loan-prepayment-calculator-guide",
+  "fd-calculator-guide",
+  "rd-calculator-guide",
+  "ppf-calculator-guide",
+  "ctc-to-in-hand-guide",
+  "income-tax-calculator-guide",
+];
+
 const pages = [
   "about",
   "contact",
@@ -35,6 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
+    ...guides.map((slug) => ({
+      url: absoluteUrl(`/guides/${slug}`),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+    { url: absoluteUrl("/guides"), changeFrequency: "weekly", priority: 0.8 },
     ...pages.map((slug) => ({
       url: absoluteUrl(`/${slug}`),
       changeFrequency: "yearly" as const,

@@ -159,6 +159,12 @@ export default function CalculatorPage({ title, category, description, slug, chi
 
           {intro && <article className="mt-12 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">About {title}</h2><p className="mt-3 leading-7 text-slate-600">{intro}</p></article>}
 
+          <article className="mt-6 rounded-3xl border border-blue-100 bg-blue-50/60 p-6">
+            <h2 className="text-xl font-extrabold text-slate-950">Want to understand this calculation?</h2>
+            <p className="mt-2 leading-7 text-slate-700">Read our detailed guide for the assumptions, examples, common mistakes and practical ways to interpret the result.</p>
+            <Link href={`/guides/${slug}-guide`} className="mt-4 inline-flex font-bold text-blue-700 hover:text-blue-800">Read the {title} guide →</Link>
+          </article>
+
           {howToUse?.length ? <article className="mt-6 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">How to use this calculator</h2><ol className="mt-4 list-decimal space-y-2 pl-6 text-slate-600">{howToUse.map((step) => <li key={step} className="leading-7">{step}</li>)}</ol></article> : null}
 
           {effectiveMethodology && <article className="mt-6 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">Calculation methodology</h2><p className="mt-3 leading-7 text-slate-600">{effectiveMethodology}</p>{formulas[slug] && <div className="mt-5 rounded-2xl bg-slate-50 p-5"><h3 className="font-bold text-slate-900">Formula / calculation model</h3><p className="mt-2 text-sm leading-6 text-slate-600">{formulas[slug]}</p></div>}{effectiveSource && <p className="mt-4 text-sm text-slate-500">Reference: <a href={effectiveSource.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 underline">{effectiveSource.label}</a></p>}</article>}

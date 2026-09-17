@@ -75,6 +75,38 @@ export default function Home() {
       </section>
 
       <AllCalculators/>
+      <section className="container pb-12">
+        <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-soft md:p-10">
+          <div className="max-w-3xl">
+            <p className="text-xs font-bold tracking-[.2em] text-blue-700">MONEY GUIDES</p>
+            <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-950">Don’t just calculate. Understand the result.</h2>
+            <p className="mt-3 leading-7 text-slate-600">
+              Our original guides explain the assumptions behind each calculator, show how to interpret the numbers, and highlight common mistakes. Use them before making an important financial decision.
+            </p>
+          </div>
+          <div className="mt-7 grid gap-4 md:grid-cols-3">
+            <Link href="/guides/sip-calculator-guide" className="rounded-2xl border border-slate-200 p-5 hover:border-blue-200">
+              <div className="text-xs font-bold text-blue-700">INVESTING</div>
+              <h3 className="mt-2 font-extrabold text-slate-950">How SIP calculations work</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">Understand compounding, assumptions and what a SIP projection can actually tell you.</p>
+            </Link>
+            <Link href="/guides/emi-calculator-guide" className="rounded-2xl border border-slate-200 p-5 hover:border-blue-200">
+              <div className="text-xs font-bold text-blue-700">LOANS</div>
+              <h3 className="mt-2 font-extrabold text-slate-950">Understand EMI before borrowing</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">See why tenure, interest and total repayment matter more than EMI alone.</p>
+            </Link>
+            <Link href="/guides/income-tax-calculator-guide" className="rounded-2xl border border-slate-200 p-5 hover:border-blue-200">
+              <div className="text-xs font-bold text-blue-700">TAX</div>
+              <h3 className="mt-2 font-extrabold text-slate-950">Read an income-tax estimate</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">Learn what to check before relying on a tax calculator result.</p>
+            </Link>
+          </div>
+          <Link href="/guides" className="mt-7 inline-flex items-center font-bold text-blue-700">
+            Browse all money guides <ArrowRight className="ml-2" size={16}/>
+          </Link>
+        </div>
+      </section>
+
       <section className="container pb-8"><div className="rounded-3xl bg-gradient-to-r from-slate-950 via-slate-900 to-blue-950 p-8 text-white md:p-12"><div className="max-w-2xl"><p className="text-xs font-bold tracking-[.2em] text-blue-300">BUILT FOR CLARITY</p><h2 className="mt-3 text-3xl font-extrabold">Calculate first. Understand second. Plan better.</h2><p className="mt-3 leading-7 text-slate-300">Every calculator is designed to show the important numbers clearly, with assumptions and explanations instead of confusing spreadsheets.</p><Link href="/tools/sip-calculator" className="mt-6 inline-flex items-center rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950">Try SIP Calculator <ArrowRight className="ml-2" size={16}/></Link></div></div></section>
       <Footer/>
     </main>
