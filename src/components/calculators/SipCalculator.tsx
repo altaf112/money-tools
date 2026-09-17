@@ -13,7 +13,7 @@ export default function SipCalculator() {
     const n = years * 12;
     const m = rate / 100 / 12;
     const invested = monthly * n;
-    const future = m === 0 ? invested : monthly * ((Math.pow(1 + m, n) - 1) / m);
+    const future = m === 0 ? invested : monthly * ((Math.pow(1 + m, n) - 1) / m) * (1 + m);
     return { invested, future, returns: future - invested };
   }, [monthly, rate, years]);
 

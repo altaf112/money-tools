@@ -73,6 +73,7 @@ export default function Home() {
           </article>
         </div>
       </section>
+
       <AllCalculators/>
       <section className="container pb-8"><div className="rounded-3xl bg-gradient-to-r from-slate-950 via-slate-900 to-blue-950 p-8 text-white md:p-12"><div className="max-w-2xl"><p className="text-xs font-bold tracking-[.2em] text-blue-300">BUILT FOR CLARITY</p><h2 className="mt-3 text-3xl font-extrabold">Calculate first. Understand second. Plan better.</h2><p className="mt-3 leading-7 text-slate-300">Every calculator is designed to show the important numbers clearly, with assumptions and explanations instead of confusing spreadsheets.</p><Link href="/tools/sip-calculator" className="mt-6 inline-flex items-center rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950">Try SIP Calculator <ArrowRight className="ml-2" size={16}/></Link></div></div></section>
       <Footer/>

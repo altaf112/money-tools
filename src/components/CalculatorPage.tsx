@@ -21,23 +21,23 @@ type Props = {
 };
 
 const formulas: Record<string, string> = {
-  "sip-calculator": "FV = P × [((1 + r)^n − 1) / r], using monthly contributions and a monthly rate derived from the assumed annual return.",
-  "step-up-sip-calculator": "The monthly SIP increases by the selected step-up percentage at the start of each investment year; each instalment is then projected using the assumed monthly rate.",
-  "lumpsum-calculator": "FV = P × (1 + r)^n, where P is the initial investment, r is the annual return and n is the number of years.",
+  "sip-calculator": "FV = P × [((1 + r)^n − 1) / r], assuming each monthly SIP is invested at the end of the month.",
+  "step-up-sip-calculator": "Each investment year uses a higher monthly SIP based on the selected annual step-up percentage; each monthly contribution is then projected using the assumed monthly rate.",
+  "lumpsum-calculator": "FV = P × (1 + r)^n, where P is the initial investment, r is the assumed annual return and n is the number of years.",
   "cagr-calculator": "CAGR = (Ending Value / Starting Value)^(1 / Years) − 1.",
-  "emi-calculator": "EMI = P × r × (1 + r)^n / [(1 + r)^n − 1], where r is the monthly interest rate and n is the number of monthly payments.",
-  "home-loan-calculator": "The home-loan EMI uses the standard reducing-balance EMI formula with a monthly interest rate and monthly repayment count.",
-  "loan-prepayment-calculator": "The model reduces outstanding principal by the planned prepayment and compares the resulting repayment schedule with the original schedule.",
+  "emi-calculator": "EMI = P × r × (1 + r)^n / [(1 + r)^n − 1], where P is principal, r is the monthly interest rate and n is the number of monthly payments.",
+  "home-loan-calculator": "The estimate uses the standard reducing-balance EMI formula with a monthly interest rate and the selected number of monthly payments.",
+  "loan-prepayment-calculator": "The estimate models the outstanding balance after the planned prepayment and compares the resulting repayment schedule with the original schedule.",
   "fd-calculator": "FV = P × (1 + r/m)^(m×t), where m is the assumed compounding frequency.",
-  "rd-calculator": "The calculator uses a recurring-deposit estimate based on regular monthly deposits and the assumed quarterly rate.",
-  "ppf-calculator": "The illustration applies the assumed annual PPF rate to monthly balances under the selected contribution timing assumption.",
-  "ctc-to-in-hand": "The estimate starts with annual CTC, separates assumed salary components and subtracts the selected statutory/payroll assumptions.",
-  "income-tax-calculator": "Tax is estimated by applying the selected regime's slab rates and applicable deductions, rebates, surcharge and cess assumptions."
+  "rd-calculator": "The calculator uses a recurring-deposit estimate based on regular monthly deposits and the stated quarterly-compounding assumption.",
+  "ppf-calculator": "The illustration applies the selected annual PPF rate using the contribution timing assumption shown by the calculator.",
+  "ctc-to-in-hand": "The estimate starts from CTC and subtracts the payroll components and deductions represented by this simplified model.",
+  "income-tax-calculator": "Tax is estimated from the selected Indian tax regime's slab and deduction assumptions used by this calculator."
 };
 
 const guidance: Record<string, { methodology: string; limitations: string; source?: { label: string; href: string } }> = {
   "sip-calculator": {
-    methodology: "The calculator uses a standard SIP future-value model. Each monthly contribution is assumed to be invested at the end of the month, and the annual return entered by the user is converted to a monthly rate for the estimate. Formula: FV = P × [((1 + r)^n − 1) / r], where P is the monthly investment, r is the monthly rate and n is the number of months.",
+    methodology: "The calculator uses a standard monthly-compounding SIP model. The monthly contribution is assumed to be invested at the end of each month, and the annual return entered by the user is converted to a monthly rate for the estimate.",
     limitations: "Actual mutual-fund returns vary over time. The result does not account for expense ratios, taxes, exit loads, market volatility or the exact NAV on each instalment date.",
   },
   "step-up-sip-calculator": {
