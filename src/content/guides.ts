@@ -594,7 +594,7 @@ export const guideSources: Record<string, { label: string; url: string }[]> = {
   ],
   "emi-calculator-guide": [
     { label: "RBI — Loan and lending guidance", url: "https://www.rbi.org.in/" },
-    { label: "RBI — Floating-rate EMI FAQs", url: "https://www.rbi.org.in/scripts/FAQView.aspx/FAQView.aspx/FAQView.aspx?Id=170" },
+    { label: "RBI — Floating-rate EMI FAQs", url: "https://www.rbi.org.in/commonman/Upload/English/FAQs/PDFs/FAQRFIR10012025.pdf" },
   ],
   "home-loan-emi-guide": [
     { label: "RBI — Home loan consumer guidance", url: "https://www.rbi.org.in/CommonPerson/English/scripts/notification.aspx?id=1457" },

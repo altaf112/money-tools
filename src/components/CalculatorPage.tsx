@@ -20,6 +20,21 @@ type Props = {
   source?: { label: string; href: string };
 };
 
+const guideSlugs: Record<string, string> = {
+  "sip-calculator": "sip-calculator-guide",
+  "step-up-sip-calculator": "step-up-sip-calculator-guide",
+  "lumpsum-calculator": "lumpsum-calculator-guide",
+  "cagr-calculator": "cagr-calculator-guide",
+  "emi-calculator": "emi-calculator-guide",
+  "home-loan-calculator": "home-loan-emi-guide",
+  "loan-prepayment-calculator": "loan-prepayment-guide",
+  "fd-calculator": "fd-calculator-guide",
+  "rd-calculator": "rd-calculator-guide",
+  "ppf-calculator": "ppf-guide",
+  "ctc-to-in-hand": "ctc-to-in-hand-salary-guide",
+  "income-tax-calculator": "income-tax-calculator-guide",
+};
+
 const formulas: Record<string, string> = {
   "sip-calculator": "FV = P × [((1 + r)^n − 1) / r], assuming each monthly SIP is invested at the end of the month.",
   "step-up-sip-calculator": "Each investment year uses a higher monthly SIP based on the selected annual step-up percentage; each monthly contribution is then projected using the assumed monthly rate.",
@@ -162,7 +177,7 @@ export default function CalculatorPage({ title, category, description, slug, chi
           <article className="mt-6 rounded-3xl border border-blue-100 bg-blue-50/60 p-6">
             <h2 className="text-xl font-extrabold text-slate-950">Want to understand this calculation?</h2>
             <p className="mt-2 leading-7 text-slate-700">Read our detailed guide for the assumptions, examples, common mistakes and practical ways to interpret the result.</p>
-            <Link href={`/guides/${slug}-guide`} className="mt-4 inline-flex font-bold text-blue-700 hover:text-blue-800">Read the {title} guide →</Link>
+            <Link href={`/guides/${guideSlugs[slug] ?? `${slug}-guide`}`} className="mt-4 inline-flex font-bold text-blue-700 hover:text-blue-800">Read the {title} guide →</Link>
           </article>
 
           {howToUse?.length ? <article className="mt-6 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">How to use this calculator</h2><ol className="mt-4 list-decimal space-y-2 pl-6 text-slate-600">{howToUse.map((step) => <li key={step} className="leading-7">{step}</li>)}</ol></article> : null}

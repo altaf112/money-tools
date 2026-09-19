@@ -22,12 +22,12 @@ const guides = [
   "lumpsum-calculator-guide",
   "cagr-calculator-guide",
   "emi-calculator-guide",
-  "home-loan-calculator-guide",
-  "loan-prepayment-calculator-guide",
+  "home-loan-emi-guide",
+  "loan-prepayment-guide",
   "fd-calculator-guide",
   "rd-calculator-guide",
-  "ppf-calculator-guide",
-  "ctc-to-in-hand-guide",
+  "ppf-guide",
+  "ctc-to-in-hand-salary-guide",
   "income-tax-calculator-guide",
 ];
 

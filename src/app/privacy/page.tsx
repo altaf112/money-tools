@@ -54,9 +54,25 @@ export default function PrivacyPage() {
         policies and user choices.
       </p>
       <p>
-        Google explains its advertising-cookie practices and publisher disclosure
-        requirements in its publisher documentation. Users can manage advertising choices
-        through Google&apos;s available controls.
+        Google explains how information is used on sites that use Google services and how
+        users can control advertising choices. See Google&apos;s
+        <a
+          href="https://policies.google.com/technologies/partner-sites"
+          target="_blank"
+          rel="noreferrer"
+          className="font-semibold text-blue-700 hover:text-blue-800"
+        >
+          information about partner sites and apps
+        </a>
+        and
+        <a
+          href="https://adssettings.google.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="ml-1 font-semibold text-blue-700 hover:text-blue-800"
+        >
+          Google Ads Settings
+        </a>.
       </p>
 
       <h2>6. Analytics</h2>
@@ -111,7 +127,6 @@ export default function PrivacyPage() {
       <h2>13. Contact</h2>
       <p>
         Privacy questions can be sent to <strong>{SUPPORT_EMAIL}</strong>.
-        Replace this placeholder with your real email address before launch.
       </p>
     </InfoPage>
   );

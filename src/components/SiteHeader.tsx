@@ -30,12 +30,13 @@ export default function SiteHeader() {
               </div>
             </div>
           ))}
+          <Link href="/guides" className="ml-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:border-blue-200 hover:text-blue-700">Guides</Link>
           <Link href="/#calculators" className="ml-2 rounded-xl bg-slate-950 px-4 py-2.5 text-sm font-semibold text-white hover:bg-slate-800"><Calculator className="mr-1.5 inline" size={15}/>All Calculators</Link>
         </nav>
         <button aria-label="Open menu" onClick={() => setOpen(!open)} className="rounded-xl border border-slate-200 p-2 lg:hidden">{open ? <X/> : <Menu/>}</button>
       </div>
       {open && <div className="border-t border-slate-200 bg-white px-4 pb-5 lg:hidden">
-        <div className="container pt-3">{menus.flatMap(m => m.links).map(([label,href]) => <Link onClick={()=>setOpen(false)} key={href} href={href} className="block border-b border-slate-100 py-3 text-sm font-semibold">{label}</Link>)}</div>
+        <div className="container pt-3"><Link onClick={()=>setOpen(false)} href="/guides" className="block border-b border-slate-100 py-3 text-sm font-semibold">Guides</Link>{menus.flatMap(m => m.links).map(([label,href]) => <Link onClick={()=>setOpen(false)} key={href} href={href} className="block border-b border-slate-100 py-3 text-sm font-semibold">{label}</Link>)}</div>
       </div>}
     </header>
   );
