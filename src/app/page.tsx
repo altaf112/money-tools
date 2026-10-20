@@ -8,18 +8,18 @@ import { absoluteUrl, SITE_NAME } from "@/lib/seo";
 import CalculatorSearch from "@/components/CalculatorSearch";
 
 export const metadata: Metadata = {
-  title: "Financial Calculators for Indians",
+  title: "Free Financial Calculators India: SIP, EMI, Salary & Tax",
   description:
-    "Free India-focused financial calculators for SIP, EMI, FD, RD, PPF, loans, salary and tax planning.",
+    "Calculate SIP returns, loan EMI, CTC take-home salary, income tax, FD, RD and PPF estimates with free India-focused financial calculators and clear assumptions.",
   alternates: { canonical: absoluteUrl("/") },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: absoluteUrl("/"),
     siteName: SITE_NAME,
-    title: "Financial Calculators for Indians",
+    title: "Free Financial Calculators India: SIP, EMI, Salary & Tax",
     description:
-      "Free India-focused financial calculators for SIP, EMI, FD, RD, PPF, loans, salary and tax planning.",
+      "Calculate SIP returns, loan EMI, CTC take-home salary, income tax, FD, RD and PPF estimates with free India-focused financial calculators and clear assumptions.",
   },
 };
 

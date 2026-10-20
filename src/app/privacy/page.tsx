@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import InfoPage from "@/components/InfoPage";
-import { SUPPORT_EMAIL } from "@/lib/seo";
+import { SUPPORT_EMAIL, absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
+  alternates: { canonical: absoluteUrl("/privacy") },
   title: "Privacy Policy",
   description: "Money Tools privacy policy covering cookies, analytics, advertising and information submitted by users.",
 };

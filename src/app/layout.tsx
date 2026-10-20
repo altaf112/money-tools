@@ -21,7 +21,6 @@ export const metadata: Metadata = {
     "salary calculator",
     "income tax calculator",
   ],
-  alternates: { canonical: "/" },
   robots: {
     index: true,
     follow: true,

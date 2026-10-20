@@ -4,7 +4,7 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://toolmoney.
 export const SITE_NAME = "Money Tools";
 export const SUPPORT_EMAIL = process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "support@toolmoney.in";
 export const DEFAULT_DESCRIPTION =
-  "Free India-focused financial calculators for SIP, EMI, FD, RD, PPF, loans, salary and tax planning.";
+  "Use free online financial calculators for India: SIP returns, EMI and home loans, CTC to in-hand salary, income tax, FD, RD, PPF and investment planning.";
 
 export function absoluteUrl(path = "") {
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;

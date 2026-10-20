@@ -480,17 +480,22 @@ export const guides: Guide[] = [
   },
   {
     slug: "ctc-to-in-hand-salary-guide",
-    title: "CTC to In-Hand Salary Guide: Why Your Offer Package Is Not Your Bank Credit",
-    seoTitle: "CTC to In-Hand Salary Guide India: Salary Structure, PF and Deductions",
-    description: "Understand CTC, gross salary, fixed pay, variable pay, employee PF and other deductions so you can estimate take-home pay more realistically.",
+    title: "CTC Full Form and Meaning in Salary: Understand Your Job Offer",
+    seoTitle: "CTC Full Form & Meaning in Salary | India Guide",
+    description: "Learn the full form of CTC, what Cost to Company means in an Indian job offer, and how CTC differs from gross salary and monthly in-hand pay.",
     category: "SALARY",
     calculator: "/tools/ctc-to-in-hand",
     calculatorLabel: "CTC to In-Hand Calculator",
-    intro: "A salary offer can contain several numbers that look similar but mean different things. CTC is not the same as gross salary, and gross salary is not the same as monthly take-home pay. A CTC-to-in-hand calculator can provide a quick estimate, but the offer letter, payslip and payroll rules are the final references.",
+    intro: "CTC stands for Cost to Company. In an Indian job offer, it is the annual cost an employer attributes to employing you, and it can include fixed salary, employer contributions, insurance, gratuity, bonuses and other benefits. CTC is not automatically your gross salary or the amount credited to your bank each month. This guide explains the terms, shows how to read a package and links to a calculator for an estimate.",
     sections: [
-      { heading: "CTC, gross and in-hand are different", paragraphs: [
+      { heading: "What is the full form of CTC?", paragraphs: [
+        "The full form of CTC is Cost to Company. It is a broad annual compensation measure used by employers to describe the cost of an employee's compensation package. The exact components included in CTC depend on the employer and the offer letter, so there is no single component list that applies to every company.",
+        "For example, an offer may include annual fixed pay, employer provident fund contributions, gratuity, medical insurance and performance-linked variable pay. Some of those items may not be paid to you as regular monthly cash. Always read the salary breakup instead of assuming that CTC divided by 12 equals your take-home salary."
+      ] },
+      { heading: "CTC meaning: how it differs from gross and in-hand salary", paragraphs: [
         "Cost to Company (CTC) is a broad employer-cost figure. It may include salary components, employer contributions, variable pay, gratuity or other benefits depending on the structure. Gross salary generally refers to earnings before employee-side deductions, while in-hand is what reaches your bank after applicable deductions and adjustments.",
-        "This is why two employees with the same CTC can have different take-home pay if their salary structures, benefits, variable pay or deductions differ.",
+        "A simple way to remember the difference: CTC describes the overall package; gross salary describes earnings before employee deductions; in-hand salary is the amount you actually receive after applicable deductions. Employers can use different structures, so check the definitions and line items in your offer letter.",
+        "This is why two employees with the same CTC can have different take-home pay if their salary structures, benefits, variable pay or deductions differ."
       ] },
       { heading: "Why basic salary matters", paragraphs: [
         "Basic salary is one component used in several payroll calculations. House rent allowance, provident-fund contributions and other components may be structured around it depending on the employer and applicable rules.",
@@ -524,7 +529,7 @@ export const guides: Guide[] = [
         "Use the calculator for a first estimate, then compare the result with the offer letter and the first few payslips. If there is a large difference, identify which component caused it rather than changing the calculator inputs simply to make the result match a desired number."
       ] },
     ],
-    takeaway: "Use a CTC calculator as a first-pass estimate, then verify the actual salary structure in your offer letter and payslip. For career decisions, compare predictable cash flow and total compensation separately.",
+    takeaway: "CTC stands for Cost to Company, but it is not the same as monthly in-hand salary. Read the salary breakup, separate fixed and variable pay, account for employer contributions and deductions, then use the CTC-to-in-hand calculator as an estimate—not as a substitute for your payslip.",
   },
   {
     slug: "income-tax-calculator-guide",

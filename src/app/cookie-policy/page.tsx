@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import InfoPage from "@/components/InfoPage";
-import { SUPPORT_EMAIL } from "@/lib/seo";
+import { SUPPORT_EMAIL, absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
+  alternates: { canonical: absoluteUrl("/cookie-policy") },
   title: "Cookie Policy",
   description: "How Money Tools may use cookies and similar technologies.",
 };

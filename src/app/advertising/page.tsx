@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/seo";
 import InfoPage from "@/components/InfoPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: absoluteUrl("/advertising") },
   title: "Advertising & Monetization Disclosure",
   description: "Advertising and monetization disclosure for Money Tools.",
 };

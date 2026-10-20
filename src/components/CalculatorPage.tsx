@@ -50,6 +50,39 @@ const formulas: Record<string, string> = {
   "income-tax-calculator": "Tax is estimated from the selected Indian tax regime's slab and deduction assumptions used by this calculator."
 };
 
+const workedExamples: Record<string, { title: string; body: string; note: string }> = {
+  "sip-calculator": {
+    title: "SIP calculator example: ₹10,000 per month for 10 years",
+    body: "If you invest ₹10,000 at the end of each month for 10 years and assume a 12% annual return converted to a 1% monthly rate, the model estimates a future value of about ₹23.0 lakh. Your total contributions would be ₹12 lakh, with about ₹11.0 lakh representing projected growth.",
+    note: "This is an illustrative calculation, not a return forecast. Actual mutual-fund returns vary and may be negative over some periods.",
+  },
+  "cagr-calculator": {
+    title: "CAGR calculator example: ₹1 lakh growing to ₹1.5 lakh",
+    body: "If an investment value rises from ₹1,00,000 to ₹1,50,000 over five years, the CAGR is approximately 8.45% per year. This is the constant annualized rate connecting the two values.",
+    note: "CAGR does not show interim gains, losses or volatility and does not account for additional deposits or withdrawals.",
+  },
+  "emi-calculator": {
+    title: "EMI calculator example: ₹10 lakh loan",
+    body: "For a ₹10,00,000 loan at 9% annual interest over five years, a standard monthly reducing-balance model gives an EMI of approximately ₹20,758. Total payments would be about ₹12.46 lakh, including roughly ₹2.46 lakh in interest.",
+    note: "Lender fees, insurance, rate changes and rounding may change the actual repayment schedule.",
+  },
+  "home-loan-calculator": {
+    title: "Home loan EMI example: ₹50 lakh over 20 years",
+    body: "For a ₹50,00,000 home loan at an assumed 8.5% annual rate over 20 years, the standard monthly reducing-balance formula gives an EMI of approximately ₹43,391 before lender-specific charges.",
+    note: "This example is not a loan offer. Floating rates, fees, insurance and lender terms can change your payments.",
+  },
+  "lumpsum-calculator": {
+    title: "Lumpsum calculator example: ₹1 lakh for 5 years",
+    body: "At an assumed 10% annual compounded return, a one-time ₹1,00,000 investment would grow to about ₹1,61,051 after five years before taxes and fees.",
+    note: "The assumed rate is mathematical input, not a promise. Market-linked investments do not grow at a fixed rate each year.",
+  },
+  "fd-calculator": {
+    title: "FD calculator example: ₹1 lakh for 3 years",
+    body: "At an assumed 7% annual interest rate compounded quarterly, a ₹1,00,000 deposit would mature to approximately ₹1,23,144 after three years before tax.",
+    note: "Banks may use different product terms, payout options and rounding. Tax on interest and premature-closure penalties are not included.",
+  },
+};
+
 const guidance: Record<string, { methodology: string; limitations: string; source?: { label: string; href: string } }> = {
   "sip-calculator": {
     methodology: "The calculator uses a standard monthly-compounding SIP model. The monthly contribution is assumed to be invested at the end of each month, and the annual return entered by the user is converted to a monthly rate for the estimate.",
@@ -181,6 +214,8 @@ export default function CalculatorPage({ title, category, description, slug, chi
           </article>
 
           {howToUse?.length ? <article className="mt-6 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">How to use this calculator</h2><ol className="mt-4 list-decimal space-y-2 pl-6 text-slate-600">{howToUse.map((step) => <li key={step} className="leading-7">{step}</li>)}</ol></article> : null}
+
+          {workedExamples[slug] && <article className="mt-6 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">{workedExamples[slug].title}</h2><p className="mt-3 leading-7 text-slate-600">{workedExamples[slug].body}</p><p className="mt-3 text-sm leading-6 text-slate-500">{workedExamples[slug].note}</p></article>}
 
           {effectiveMethodology && <article className="mt-6 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">Calculation methodology</h2><p className="mt-3 leading-7 text-slate-600">{effectiveMethodology}</p>{formulas[slug] && <div className="mt-5 rounded-2xl bg-slate-50 p-5"><h3 className="font-bold text-slate-900">Formula / calculation model</h3><p className="mt-2 text-sm leading-6 text-slate-600">{formulas[slug]}</p></div>}{effectiveSource && <p className="mt-4 text-sm text-slate-500">Reference: <a href={effectiveSource.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue-700 underline">{effectiveSource.label}</a></p>}</article>}
 

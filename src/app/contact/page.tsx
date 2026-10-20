@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import InfoPage from "@/components/InfoPage";
-import { SUPPORT_EMAIL } from "@/lib/seo";
+import { SUPPORT_EMAIL, absoluteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
+  alternates: { canonical: absoluteUrl("/contact") },
   title: "Contact Us",
   description: "Contact Money Tools for corrections, questions, suggestions or business enquiries.",
 };

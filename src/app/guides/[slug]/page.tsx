@@ -61,8 +61,6 @@ export default async function GuidePage({ params }: Props) {
         description: guide.description,
         mainEntityOfPage: articleUrl,
         url: articleUrl,
-        datePublished: "2026-09-18",
-        dateModified: "2026-09-18",
         author: { "@type": "Organization", name: `${SITE_NAME} Editorial Team`, url: absoluteUrl("/editorial-policy") },
         publisher: { "@type": "Organization", name: SITE_NAME, url: absoluteUrl("/") },
         inLanguage: "en-IN",
@@ -119,7 +117,7 @@ export default async function GuidePage({ params }: Props) {
           <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
             <div className="text-xs font-bold uppercase tracking-[.14em] text-slate-500">Editorial information</div>
             <div className="mt-2 text-sm leading-6 text-slate-600">
-              Written for ToolMoney readers by the ToolMoney Editorial Team. Reviewed: 18 September 2026. This guide explains calculation concepts and planning assumptions; it does not provide personalized financial, tax or investment advice.
+              Written for ToolMoney readers by the ToolMoney Editorial Team. This guide explains calculation concepts and planning assumptions; it does not provide personalized financial, tax or investment advice. Check the official references linked below for current rates, rules and product terms.
             </div>
           </div>
 

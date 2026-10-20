@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { absoluteUrl } from "@/lib/seo";
 import InfoPage from "@/components/InfoPage";
 
 export const metadata: Metadata = {
+  alternates: { canonical: absoluteUrl("/editorial-policy") },
   title: "Editorial & Accuracy Policy",
   description: "How Money Tools develops, reviews and updates financial calculator content.",
 };
