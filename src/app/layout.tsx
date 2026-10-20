@@ -63,7 +63,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           crossOrigin="anonymous"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Script
+          id="monetag-zone-12078639"
+          src="https://nap5k.com/tag.min.js"
+          data-zone="12078639"
+          strategy="afterInteractive"
+        />
+        {children}
+      </body>
     </html>
   );
 }
