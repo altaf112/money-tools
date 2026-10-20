@@ -57,11 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en-IN">
       <head>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9818417722219939"
-          crossOrigin="anonymous"
-        />
+        
   <Script
     id="monetag-zone-12078639"
     src="https://nap5k.com/tag.min.js"
