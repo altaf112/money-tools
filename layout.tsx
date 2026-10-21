@@ -64,6 +64,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     data-zone="12078639"
     strategy="beforeInteractive"
   />
+
+   <Script
+    id="monetag-vignette-12085136"
+    src="https://n6wxm.com/vignette.min.js"
+    data-zone="12085136"
+    strategy="afterInteractive"
+  />
       </head>
       
       <body>{children}</body>
