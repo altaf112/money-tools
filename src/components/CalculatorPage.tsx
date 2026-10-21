@@ -1,6 +1,8 @@
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import Footer from "@/components/Footer";
+import AdsterraBanner from "@/components/AdsterraBanner";
+import AdsterraLeaderboardBanner from "@/components/AdsterraLeaderboardBanner";
 import { absoluteUrl, SITE_NAME } from "@/lib/seo";
 
 type FAQ = { question: string; answer: string };
@@ -204,6 +206,8 @@ export default function CalculatorPage({ title, category, description, slug, chi
           <h1 className="mt-2 text-4xl font-black tracking-tight md:text-5xl">{title}</h1>
           <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">{description}</p>
           <div className="mt-9">{children}</div>
+          <AdsterraBanner />
+          <AdsterraLeaderboardBanner />
 
           {intro && <article className="mt-12 rounded-3xl border border-slate-200 bg-white p-7 shadow-soft"><h2 className="text-2xl font-extrabold">About {title}</h2><p className="mt-3 leading-7 text-slate-600">{intro}</p></article>}
 
